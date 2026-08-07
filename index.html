@@ -20,10 +20,29 @@
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
 
+  <!--
+    Permissions Policy — explicitly opt in to every browser API the app
+    uses. Without this, stricter browsers (Kiwi, Firefox, Brave, Samsung
+    Internet) silently deny geolocation and camera even after the user
+    taps "Allow" in the prompt, because the embedding context hasn't
+    declared it needs those features.
+  -->
+  <meta http-equiv="Permissions-Policy"
+        content="geolocation=*, camera=*, microphone=*, notifications=*">
+
+  <!--
+    Cross-Origin policies — required for SharedArrayBuffer (used by
+    CanvasKit/WASM) and also prevents some browsers from blocking
+    cross-origin image fetches that back the news card images.
+  -->
+  <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+  <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="reality_merge">
+  <meta name="apple-mobile-web-app-title" content="Realm">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
